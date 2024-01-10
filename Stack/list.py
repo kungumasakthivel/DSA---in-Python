@@ -16,7 +16,7 @@ def is_empty(stack):
     """
     return len(stack) == 0
 
-
+# initialized empty list to perform stack operation
 stack = []
 
 # append method is used to push element into stack
