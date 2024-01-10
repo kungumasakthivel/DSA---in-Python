@@ -10,4 +10,9 @@ def linear_search(l, x):
             return "Element found in index " + str(i)
     return "Element not found"
 
-print(linear_search([1, 2, 3, 4], 3))
+
+l = [1, 2, 3, 4]
+x = 567
+
+res = linear_search(l, x)
+print(res)
