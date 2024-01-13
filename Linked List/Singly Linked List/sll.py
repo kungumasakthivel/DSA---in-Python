@@ -24,6 +24,27 @@ class SLL:
             new_node.next = self.head
             self.head = new_node
 
+    def insert_at_idx(self, val, idx):
+        new_node = Node(val)
+        curr_node = self.head
+        possition = 0
+
+        if possition == idx:
+            self.insert_at_start(val)
+        else:
+            while(curr_node.next != None and possition + 1 != idx):
+                possition += 1
+                curr_node = curr_node.next
+            
+            # This if statement ensures that not adding new node at end of the list while getting out of range value of idx
+            if possition < idx-1:
+                print("Index out of range")
+                return
+            elif curr_node != None:
+                new_node.next = curr_node.next
+                curr_node.next = new_node
+
+
 l = SLL()
 
 e1 = Node(1)
@@ -35,5 +56,6 @@ l.head.next = e2
 e2.next = e3
 
 l.insert_at_start(10)
+l.insert_at_idx(22, 3)
 
 l.list_print()
