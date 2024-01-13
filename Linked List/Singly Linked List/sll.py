@@ -7,16 +7,22 @@ class SLL:
     def __init__(self):
         self.head = None
 
+    # used to print all linked list
     def list_print(self):
         printval = self.head
         while printval is not None:
             print(printval.data)
             printval = printval.next
     
+    # used to insert a new node at beginning of linked list
     def insert_at_start(self, val):
         new_node = Node(val)
-        new_node.next = self.head
-        self.head = new_node
+        if self.head is None:
+            self.head = new_node
+            return
+        else:
+            new_node.next = self.head
+            self.head = new_node
 
 l = SLL()
 
