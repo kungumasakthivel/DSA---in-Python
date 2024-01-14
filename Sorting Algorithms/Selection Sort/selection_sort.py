@@ -1,5 +1,9 @@
 def selection_sort(l):
-
+    """
+        l -> it is a list of elements need to be sorted
+        no need to return l from function because it
+        sort the list in-place, so no need to return
+    """
     for i in range(len(l)):
         min_idx = i
         for j in range(i+1, len(l)):
